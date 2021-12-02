@@ -1,9 +1,5 @@
 # Powered by Jekyll
 
-![](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/promo-img.jpg?raw=true)
-
-
-
 ## Features
 
 - [Google Fonts](https://fonts.google.com/)
