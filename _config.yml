@@ -1,8 +1,7 @@
 title: Hello, world! I'm Davood Rahmanifard
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+ Experienced Actuary with a demonstrated history of working in the pension, life insurance, health insurance, non-life insurance and investment management industry. Skilled in Quantitative Modeling, ALM, Financial Risk, Risk Management, Machine Learning, Analytical Skills and Econometrics.
+ Eager to learn and challenge myself in a continuous basis and further development. Love to do in-depth research and come to a aconcrete and practical solution.
 permalink: ':title/'
 #baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
 baseurl: "/"
@@ -11,12 +10,12 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Davood Rahmanifard # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
-social-twitter: # add your Twitter handle
+author-img: davood.jpg # add your photo
+about-author: Experienced Actuary and Financial Engineer. Always hungry to keep learning. # add description
+social-twitter: https://twitter.com/rahmanifard # add your Twitter handle
 social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
-social-linkedin: # add your Linkedin handle
+social-github: davoodrahmanifard # add your Github handle
+social-linkedin: https://www.linkedin.com/in/davood-rahmanifard/ # add your Linkedin handle
 social-email: # add your Email address
 
 # Disqus
