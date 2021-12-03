@@ -28,8 +28,7 @@ fundamental desire of researchers and practitioners as it is highly
 relevant for decision making in several areas, such as security
 valuation, investment, risk management and monetary policy making.
 
-[Fernandes, Medeiros and Scharth] [https://www.sciencedirect.com/science/article/abs/pii/S0378426613004172] 
-modeled and
+[Fernandes, Medeiros and Scharth] [ref] modeled and
 predicted the VIX by use of heterogeneous auto-regressive (HAR) models,
 including a combination of a HAR and neural networks (NNHARX). In a much
 simpler setting we will attempt to predict one day ahead values of the
@@ -357,3 +356,5 @@ parameters or initial conditions. Also, we had little control over
 activation functions, optimization algorithms, and of course the basic
 setting of a feed-forward neural network with the back-propagation
 algorithm.
+
+[ref]: https://www.sciencedirect.com/science/article/abs/pii/S0378426613004172
