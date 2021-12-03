@@ -40,7 +40,8 @@ moving average (ARIMA) and vector auto-regressive (VAR) models will be
 estimated as well.
 
 ![VIX]({{site.baseurl}}/assets/img/dailyVIX.JPG)
-Daily values of VIX (left), SPX (center) and dlog(SPX)
+
+`Daily values of VIX (left), SPX (center) and dlog(SPX)`
 
 
 Raw data have been collected from the website of the "Economic Research"
