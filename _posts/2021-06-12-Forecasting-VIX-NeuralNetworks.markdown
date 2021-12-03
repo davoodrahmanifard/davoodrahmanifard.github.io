@@ -14,8 +14,8 @@ Introduction
 
 Volatility targeting and risk parity are asset allocation methodologies
 that are directly impacted by volatility forecasting. Since its
-introduction in 1993 [@whaley1993derivatives], VIX is the flagship
-symbol for the volatility index in the market which is computed by the
+introduction in 1993, VIX is the flagship symbol for the volatility 
+index in the market which is computed by the
 Chicago Board Options Exchange(CBOE). This index shows the market's
 expectation of 30-day volatility conveyed by S&P 500 index. In recent
 years there has been a growing interest for options and futures on
@@ -28,7 +28,8 @@ fundamental desire of researchers and practitioners as it is highly
 relevant for decision making in several areas, such as security
 valuation, investment, risk management and monetary policy making.
 
-Fernandes, Medeiros and Scharth [@fernandes2014modeling] modeled and
+[Fernandes, Medeiros and Scharth] [https://www.sciencedirect.com/science/article/abs/pii/S0378426613004172] 
+modeled and
 predicted the VIX by use of heterogeneous auto-regressive (HAR) models,
 including a combination of a HAR and neural networks (NNHARX). In a much
 simpler setting we will attempt to predict one day ahead values of the
