@@ -41,14 +41,13 @@ estimated as well.
 
 ![VIX]({{site.baseurl}}/assets/img/dailyVIX.JPG)
 
-`Daily values of VIX (left), SPX (center) and dlog(SPX)`
+> Daily values of VIX (left), SPX (center) and dlog(SPX)
 
 
 Raw data have been collected from the website of the "Economic Research"
 department of "St. Louis Fed". The data set consists of 6679 daily
 observations of VIX and S&P500 index observed over the period of January
-1990 to June 2016 period (Figure [3](#fig:vix_spx){reference-type="ref"
-reference="fig:vix_spx"}). Manual imputations were performed for a very
+1990 to June 2016 period. Manual imputations were performed for a very
 limited number of non-available data points.
 
 Model design
@@ -56,9 +55,9 @@ Model design
 
 We compared three models with neural networks as well as VAR and ARIMA
 models. The response is the VIX. The regressors for our three neural
-network models are the VIX taken at up to four lags (`Vix4`), the VIX
-taken at one lag with the S&P taken at one lag (`Vix1_Spx1`), and the
-VIX with up to four lags with the S&P taken at one lag (`Vix4_Spx1`),
+network models are the VIX taken at up to four lags (*Vix4*), the VIX
+taken at one lag with the S&P taken at one lag (*Vix1_Spx1*), and the
+VIX with up to four lags with the S&P taken at one lag (*Vix4_Spx1*),
 respectively. Necessary transformations are performed on the data as
 explained in the next section.
 
