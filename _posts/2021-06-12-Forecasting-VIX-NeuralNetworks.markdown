@@ -4,7 +4,7 @@ title: "Forecasting VIX with Neural Networks"
 date: 2021-06-23 13:32:20 +0300
 description: This is a short description of Forecasting VIX with Neural Networks. # Add post description (optional)
 img: neuralnetwork.jpg # Add image post (optional)
-tags: [VIX, Neural Networks, ARIMA models, Volatility] # add tag
+tags: [VIX, Neural Networks, ARIMA,VAR, Volatility] # add tag
 ---
 
 
@@ -39,14 +39,9 @@ order to compare the predicting performances, auto-regressive integrated
 moving average (ARIMA) and vector auto-regressive (VAR) models will be
 estimated as well.
 
-![Daily values of VIX (left), SPX (center) and dlog(SPX)
-(right)](report_figure_vix.pdf){#fig:vix_spx width="\\textwidth"}
+![VIX]({{site.baseurl}}/assets/img/dailyVIX.JPG)
+Daily values of VIX (left), SPX (center) and dlog(SPX)
 
-![Daily values of VIX (left), SPX (center) and dlog(SPX)
-(right)](report_figure_spx.pdf){#fig:vix_spx width="\\textwidth"}
-
-![Daily values of VIX (left), SPX (center) and dlog(SPX)
-(right)](report_figure_dlogSpx.pdf){#fig:vix_spx width="\\textwidth"}
 
 Raw data have been collected from the website of the "Economic Research"
 department of "St. Louis Fed". The data set consists of 6679 daily
