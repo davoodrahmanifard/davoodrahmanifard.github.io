@@ -10,9 +10,12 @@ The selection of optimal portfolios is the central problem of financial investme
 
 This study presents the development of a system, based on Genetic Algorithm, in the process of the selection of portfolio and determination of the percentages to be invested in each asset, called the weight of the aaset in the investment portfolio management.The objective of the work is to evaluate the performance of Genetic Algorithms for portfolio selection and optimization. Portfolio selection and optimization are problems of multiple objectives (risk, return and correlation) where it is desired to choose a set of actions of companies with profit perspective to form an investment portfolio.
 
->This model does not have any limitation as far as the number of assets, is concerned.Parameters that affect the time of running the program in addition to the memory and CPUof the computer are number of assets and size of the population in each generation.
+>This model does not have any limitation as far as the number of assets, is concerned.Parameters that affect the time of running the program in addition to the memory and CPU of the computer are number of assets and size of the population in each generation.
 
-This study developed in 3 main steps: a study on portfolio selection and optimization and Genetic Algorithms literature; design two appropriate Genetic Algorithms for two mathematical models which designate the appropriate portfolios and their optimal weights; compare this method with linear and quadratic portfolio modeling for small scale problems and apply the designed models for a large scale real case of Alborz Insurance Company.
+This study developed in 3 main steps:
+* a study on portfolio selection and optimization and Genetic Algorithms literature
+* design two appropriate Genetic Algorithms for two mathematical models which designate the appropriate portfolios and their optimal weights
+* compare this method with linear and quadratic portfolio modeling for small scale problems and apply the designed models for a large scale real case of Alborz Insurance Company.
 
 
 Check out the [full text][full-doc] for more info and the [codes][codes-repo] written in C++ on my Github repo.
