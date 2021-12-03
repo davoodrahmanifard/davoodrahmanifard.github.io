@@ -2,9 +2,9 @@
 layout: post
 title: "Forecasting VIX with Neural Networks"
 date: 2021-06-23 13:32:20 +0300
-description: This is a short description and codes(in C++) of my first master thesis written in 2006. # Add post description (optional)
-img: genetic_algo.jpg # Add image post (optional)
-tags: [C++, Optimization, Portfolio, Genetic Algorithms] # add tag
+description: This is a short description of Forecasting VIX with Neural Networks. # Add post description (optional)
+img: neuralnetwork.jpg # Add image post (optional)
+tags: [VIX, Neural Networks, ARIMA models, Volatility] # add tag
 ---
 
 
