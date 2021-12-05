@@ -44,11 +44,10 @@ estimated as well.
 > Daily values of VIX (left), SPX (center) and dlog(SPX)
 
 
-Raw data have been collected from the website of the "Economic Research"
+Raw data has been collected from the website of the ["Economic Research"] [ref1]
 department of "St. Louis Fed". The data set consists of 6679 daily
-observations of VIX and S&P500 index observed over the period of January
-1990 to June 2016 period. Manual imputations were performed for a very
-limited number of non-available data points.
+observations of VIX and S&P500 index observed throughout January
+1990 to June 2016 period. Manual imputations were performed for a minimal number of non-available data points.
 
 Model design
 ============
@@ -353,3 +352,4 @@ setting of a feed-forward neural network with the back-propagation
 algorithm.
 
 [ref]: https://www.sciencedirect.com/science/article/abs/pii/S0378426613004172
+[ref1]: https://research.stlouisfed.org/
