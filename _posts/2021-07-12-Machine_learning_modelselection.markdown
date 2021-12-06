@@ -6,6 +6,7 @@ description: Korte handleiding voor het selecteren van machine learning modellen
 img: machine_learn.jpg # Add image post (optional)
 tags: [Model selecetion, Machine learning] # add tag
 ---
+
 Het vinden van het beste algoritme voor machine learning voor uw probleem kan een uitdaging zijn als u genoeg tijd en middelen heeft om alle mogelijke algoritmen uit te proberen en het beste te kiezen. Meestal hebben we daar echter niet genoeg tijd voor. Gegeven de volgende zeven criteria om op te kiezen, wat zal helpen om uw keuzes op een shortlist te zetten zodat u ze in korte tijd kunt toepassen.m op te kiezen, wat zal helpen om uw keuzes op een shortlist te zetten zodat u ze in korte tijd kunt toepassen.
 
 1. Verklaarbaarheid
