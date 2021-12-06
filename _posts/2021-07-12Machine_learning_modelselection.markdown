@@ -4,7 +4,7 @@ title: "Korte handleiding voor het selecteren van machine learning modellen"
 date: 2021-07-12 13:32:20 +0300
 description: Korte handleiding voor het selecteren van machine learning modellen. # Add post description (optional)
 img: machine_learn.jpg # Add image post (optional)
-tags: [C++, Optimization, Portfolio, Genetic Algorithms] # add tag
+tags: [Model selecetion, Machine learning] # add tag
 ---
 Het vinden van het beste algoritme voor machine learning voor uw probleem kan een uitdaging zijn als u genoeg tijd en middelen heeft om alle mogelijke algoritmen uit te proberen en het beste te kiezen. Meestal hebben we daar echter niet genoeg tijd voor. Gegeven de volgende zeven criteria om op te kiezen, wat zal helpen om uw keuzes op een shortlist te zetten zodat u ze in korte tijd kunt toepassen.m op te kiezen, wat zal helpen om uw keuzes op een shortlist te zetten zodat u ze in korte tijd kunt toepassen.
 
