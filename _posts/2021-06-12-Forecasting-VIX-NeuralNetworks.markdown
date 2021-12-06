@@ -28,7 +28,7 @@ fundamental desire of researchers and practitioners as it is highly
 relevant for decision making in several areas, such as security
 valuation, investment, risk management and monetary policy making.
 
-[Fernandes, Medeiros and Scharth] [ref] modeled and
+[Fernandes, Medeiros and Scharth] [ref0] modeled and
 predicted the VIX by use of heterogeneous auto-regressive (HAR) models,
 including a combination of a HAR and neural networks (NNHARX). In a much
 simpler setting we will attempt to predict one day ahead values of the
@@ -44,7 +44,7 @@ estimated as well.
 > Daily values of VIX (left), SPX (center) and dlog(SPX)
 
 
-Raw data has been collected from the website of the ["Economic Research"] [ref1]
+Selected data has been collected from the website of the ["Economic Research"] [ref1]
 department of "St. Louis Fed". The data set consists of 6679 daily
 observations of VIX and S&P500 index observed throughout January
 1990 to June 2016 period. Manual imputations were performed for a minimal number of non-available data points.
@@ -53,7 +53,7 @@ Model design
 ============
 
 We compared three models with neural networks as well as VAR and ARIMA
-models. The response is the VIX. The regressors for our three neural
+models. The response variable is the VIX value. The regressors for our three neural
 network models are the VIX taken at up to four lags (*Vix4*), the VIX
 taken at one lag with the S&P taken at one lag (*Vix1_Spx1*), and the
 VIX with up to four lags with the S&P taken at one lag (*Vix4_Spx1*),
@@ -64,7 +64,7 @@ As for the network architecture, the type of neural networks used for
 regression are feed-forward neural networks, where inputs are the
 regressors and the output is the response variable. As we are using R
 for our assignment, we are constrained by the features of the available
-packages. We chose the package *nnet*. The package considers only one
+packages. We chose the package [*nnet*] [nnet]. The package considers only one
 hidden layer. The activation function of the hidden units of *nnet* is a
 logistic function, and we set the output unit activation function to
 linear. We want to determine the best number of hidden units for our
@@ -86,9 +86,9 @@ and evaluate its ability to generalize to new data.
 Unfortunately, the *nnet* function does not report the weight parameter
 estimates for each intermediate iteration, so we had to implement a
 work-around, fairly expensive in computing time. It proceeds as follows:
-a network is trained until a given iteration $i$, results are recorded,
+a network is trained until a given iteration i, results are recorded,
 then the same network is retrained from scratch until the iteration
-$i+1$. We start this process from one, and repeat until a maximum number
+i+1. We start this process from one, and repeat until a maximum number
 of iterations chosen arbitrarily is covered. The same initial random
 seed is used for each loop so that the intermediary results remain the
 same across all training runs. Our program then automatically selects
@@ -134,24 +134,17 @@ test set.
 In our first set of networks to estimate, training and validation of the
 five windows are prepared only once for all the networks of the set, due
 to computing time limitations. The number of hidden neurons, based on
-several initial trials, were taken from $\{3, 4, 5, 7, 9, 10, 15\}$. The
+several initial trials, were taken from {3, 4, 5, 7, 9, 10, 15}. The
 maximum number of iterations is set at 150. Due to the work-around, this
 means that each network is trained 150 times, from 1 to 150 intermediary
-iterations. Figure
-[\[fig:performanceOfNetwork\]](#fig:performanceOfNetwork){reference-type="ref"
-reference="fig:performanceOfNetwork"} illustrates the process of early
-stopping. Two sets of initial weights are defined for each network (by
-setting a different random seed).
+iterations. 
 
 Altogether there are 36 thousand networks to train. The optimal network
-iteration in terms of validation error is selected for each network.
-After averaging over the windows and initial conditions, we obtain a
-list of 24 models and number of hidden units, with their reported mean
+iteration in terms of validation error is selected for each network. After averaging over the windows and initial conditions, we obtain a list of 24 models and number of hidden units, with their reported mean
 squared error on the training, validation and test sets. The results are
-presented in Table
-[\[table:Table\_MSE\_2\_sorted\]](#table:Table_MSE_2_sorted){reference-type="ref"
-reference="table:Table_MSE_2_sorted"}, sorted with increasing validation
-MSE.
+presented in the following Table, sorted with increasing validation MSE.
+
+![VIX]({{site.baseurl}}/assets/img/table1_vix.JPG)
 
 Results
 =======
@@ -351,5 +344,6 @@ activation functions, optimization algorithms, and of course the basic
 setting of a feed-forward neural network with the back-propagation
 algorithm.
 
-[ref]: https://www.sciencedirect.com/science/article/abs/pii/S0378426613004172
+[ref0]: https://www.sciencedirect.com/science/article/abs/pii/S0378426613004172
 [ref1]: https://research.stlouisfed.org/
+[nnet]: https://cran.r-project.org/web/packages/nnet/index.html
