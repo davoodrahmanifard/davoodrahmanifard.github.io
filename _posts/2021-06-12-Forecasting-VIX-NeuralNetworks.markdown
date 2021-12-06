@@ -39,7 +39,7 @@ order to compare the predicting performances, auto-regressive integrated
 moving average (ARIMA) and vector auto-regressive (VAR) models will be
 estimated as well.
 
-![VIX]({{site.baseurl}}/assets/img/dailyVIX.JPG)
+![dailyVIX]({{site.baseurl}}/assets/img/dailyVIX.JPG)
 
 > Daily values of VIX (left), SPX (center) and dlog(SPX)
 
@@ -144,7 +144,7 @@ iteration in terms of validation error is selected for each network. After avera
 squared error on the training, validation and test sets. The results are
 presented in the following Table, sorted with increasing validation MSE.
 
-![VIX]({{site.baseurl}}/assets/img/table1_vix.JPG)
+![table1_vix]({{site.baseurl}}/assets/img/table1_vix.JPG)
 
 Results
 =======
@@ -192,7 +192,7 @@ a much larger number of initial conditions does show some usable
 relationship between number of hidden units, but this is not possible to
 run due to the processing time of our implementation.
 
-![VIX]({{site.baseurl}}/assets/img/figure2.JPG)
+![figure2]({{site.baseurl}}/assets/img/figure2.JPG)
 
 
 If we consider the individual networks, and take the best networks in
@@ -228,7 +228,7 @@ network of window 5 (bottom), stopped at iteration 33, 9 hidden units,
 with a test MSE of 1.597, performs well: the test data lie in the zone
 covered by the training and validation data.
 
-![VIX]({{site.baseurl}}/assets/img/figure3.JPG)
+![figure3]({{site.baseurl}}/assets/img/Figure3.JPG)
 
 
 VAR and ARIMA models
