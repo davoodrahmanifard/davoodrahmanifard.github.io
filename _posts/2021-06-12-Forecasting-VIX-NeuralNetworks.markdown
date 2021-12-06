@@ -153,9 +153,9 @@ Neural Networks
 ---------------
 
 If we take the validation error as a criterion to select the most
-adequate model, we would choose the model `Vix4_Spx1` with 10 hidden
-units, with validation MSE of $2.460$, its performance on the test set
-is $4.102$. Of all models actually processed, the `Vix4` is the best in
+adequate model, we would choose the model *Vix4_Spx1* with 10 hidden
+units, with validation MSE of 2.460, its performance on the test set
+is 4.102. Of all models actually processed, the *Vix4* is the best in
 terms of average performance on the test set, with a MSE of $3.991$.
 
 Looking at the results from a different perspective, we do not recognize
@@ -177,42 +177,26 @@ initial weights.
 
 Nevertheless, we ran a second set of networks with the hope to discover
 some consistency in the results. We concentrated our efforts on a set of
-networks with the model `Vix4`, number of hidden units considered in {5,
+networks with the model *Vix4*, number of hidden units considered in {5,
 7, 9, 10, 12, 14, 16, 20}, and 4 training schemes with different random
 seeds (that is, 4 times 5 windows described earlier), for each of the
 combinations.
 
 After several hours of processing, the results remained disappointing.
-Averaged over the windows, sampling and initial conditions, the
+ Averaged over the windows, sampling and initial conditions, the
 validation error does seem to have a slight decreasing pattern, with a
-performance spike for 14 hidden units (Figure
-[\[fig:validationMSEbySampling\]](#fig:validationMSEbySampling){reference-type="ref"
-reference="fig:validationMSEbySampling"}). But in terms of performance
+performance spike for 14 hidden units (Figure 2). But in terms of performance
 on the test sets, 16 hidden units and 9 hidden units are best, with no
 noticeable trend or curvature. It could be that running the process for
 a much larger number of initial conditions does show some usable
 relationship between number of hidden units, but this is not possible to
 run due to the processing time of our implementation.
 
-![(left:) Validation MSE of the `Vix4` model for each of the random
-seeds used for sampling the validation sets. The dotted line represents
-the average. (right:) Test MSE of the `Vix4` model averaged over the
-random seeds used for sampling the validation
-sets.](report_figure_validationMSEbySampling.pdf){#fig:testMSE
-width="\\textwidth"}
+![VIX]({{site.baseurl}}/assets/img/figure2.JPG)
 
-![(left:) Validation MSE of the `Vix4` model for each of the random
-seeds used for sampling the validation sets. The dotted line represents
-the average. (right:) Test MSE of the `Vix4` model averaged over the
-random seeds used for sampling the validation
-sets.](report_figure_testMSE.pdf){#fig:testMSE width="\\textwidth"}
-
-[\[fig:testMSE\]]{#fig:testMSE label="fig:testMSE"}
 
 If we consider the individual networks, and take the best networks in
-terms of test MSE for each window (Table
-[\[table:MSE\_NN\_ARIMA\]](#table:MSE_NN_ARIMA){reference-type="ref"
-reference="table:MSE_NN_ARIMA"}), we get some interesting results. If we
+terms of test MSE for each window (see previous table), we get some interesting results. If we
 compare the MSE of the neural network with that of the ARIMA model for a
 same window (i.e. the same test data, so that the MSE is comparable), we
 see that the neural networks performed slightly better than the ARIMA
@@ -230,18 +214,13 @@ the sampling seed is different, the MSE cannot be compared.
 Illustration for two particular networks
 ----------------------------------------
 
-Figure
-[\[fig:performanceOfNetwork\]](#fig:performanceOfNetwork){reference-type="ref"
-reference="fig:performanceOfNetwork"} (left) illustrates the early
+The following figure(left) illustrates the early
 stopping mechanism. The network is from window 1, with 7 hidden units
 and test MSE of 6.467. We see that if we didn't have this approach and
 took the network estimated at the maximum number of iterations or some
 relative measure to the training error, we would end up with a model
 with a much worse error on the test set, indicating a poorer ability to
-generalize.
-
-Figure [8](#fig:predictionScatter){reference-type="ref"
-reference="fig:predictionScatter"} (left) compares the predicted VIX to
+generalize. In addition the figure compares the predicted VIX to
 the actual VIX. We see that the same illustrated network fails to
 generalize. Probably because the test data are on a range of values not
 covered by the training and validation data. On the other hand, a
@@ -249,32 +228,8 @@ network of window 5 (bottom), stopped at iteration 33, 9 hidden units,
 with a test MSE of 1.597, performs well: the test data lie in the zone
 covered by the training and validation data.
 
-![(left:) Performance plot for the training of a network with 7 hidden
-units with MSE of 6.467 on window 1. The vertical line represents the
-iteration with minimal validation MSE.(right:) Predicted VIX compared to
-actual VIX data for the same network. (bottom:) A network of 9 hidden
-units, test MSE of 1.597 on window
-5.](report_figure_performanceOfNetwork.pdf){#fig:predictionScatter
-width="\\textwidth"}
+![VIX]({{site.baseurl}}/assets/img/figure3.JPG)
 
-![(left:) Performance plot for the training of a network with 7 hidden
-units with MSE of 6.467 on window 1. The vertical line represents the
-iteration with minimal validation MSE.(right:) Predicted VIX compared to
-actual VIX data for the same network. (bottom:) A network of 9 hidden
-units, test MSE of 1.597 on window
-5.](report_figure_predictionScatterBad.png){#fig:predictionScatter
-width="\\textwidth"}
-
-![(left:) Performance plot for the training of a network with 7 hidden
-units with MSE of 6.467 on window 1. The vertical line represents the
-iteration with minimal validation MSE.(right:) Predicted VIX compared to
-actual VIX data for the same network. (bottom:) A network of 9 hidden
-units, test MSE of 1.597 on window
-5.](report_figure_predictionScatter.png){#fig:predictionScatter
-width="\\textwidth"}
-
-[\[fig:predictionScatter\]]{#fig:predictionScatter
-label="fig:predictionScatter"}
 
 VAR and ARIMA models
 --------------------
