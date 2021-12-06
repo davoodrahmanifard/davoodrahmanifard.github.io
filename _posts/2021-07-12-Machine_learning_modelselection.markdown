@@ -14,7 +14,7 @@ Het vinden van het beste algoritme voor machine learning voor uw probleem kan ee
 Het eerste criterium om uw model op te kiezen, is verklaarbaarheid. Als u het model moet uitleggen en waarom het bepaalde output oplevert voor een niet-technisch publiek, zoals belanghebbenden of zakenpartners. Als je model bijvoorbeeld voorspelt dat iemand geen lening zou moeten krijgen, zou je de reden achter deze beslissing moeten kunnen uitleggen, ook dit is een belangrijk punt voor medische AI. Modellen zoals KNN, lineaire regressie en beslissingsbomen zouden een goede keuze zijn, aangezien de beslissingsgrenzen kunnen worden gevisualiseerd en de resultaten in niet-technische termen kunnen worden geïnterpreteerd.
 Er is echter een wisselwerking tussen verklaarbaarheid en modelprestaties. Vaak zal het gebruik van een complexer model de prestaties verhogen, maar het zal moeilijker te interpreteren zijn. Daarom, als het niet nodig is om het model en de output aan een niet-technisch publiek uit te leggen, dan zouden meer complexe modellen kunnen worden gebruikt, zoals ensembleleerders en diepe neurale netwerken.
 
-**In geheugen versus uit geheugen***
+**In geheugen versus uit geheugen**
 
 het is belangrijk om rekening te houden met het relatieve volume van uw gegevens ten opzichte van het opslagvolume van het RAM-geheugen van de server of uw pc waarop de training zal plaatsvinden. Als het RAM-geheugen alle trainingsgegevens aankan, kunt u kiezen uit een breed scala aan machine learning-algoritmen. Als het RAM de trainingsgegevens niet aankan, zijn daarom verschillende incrementele leeralgoritmen, die het model kunnen verbeteren door geleidelijk meer trainingsgegevens toe te voegen, een goede keuze.
 
