@@ -41,8 +41,6 @@ estimated as well.
 
 ![dailyVIX]({{site.baseurl}}/assets/img/dailyVIX.JPG)
 
-> Daily values of VIX (left), SPX (center) and dlog(SPX)
-
 
 Selected data has been collected from the website of the ["Economic Research"] [ref1]
 department of "St. Louis Fed". The data set consists of 6679 daily
