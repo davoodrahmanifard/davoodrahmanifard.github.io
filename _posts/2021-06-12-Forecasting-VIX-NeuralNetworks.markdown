@@ -39,7 +39,7 @@ order to compare the predicting performances, auto-regressive integrated
 moving average (ARIMA) and vector auto-regressive (VAR) models will be
 estimated as well.
 
-![dailyVIX]({{site.baseurl}}/assets/img/dailyVIX.JPG)
+![dailyVIX]({{site.baseurl}}/assets/img/figure1.JPG)
 
 
 Selected data has been collected from the website of the ["Economic Research"] [ref1]
