@@ -156,7 +156,7 @@ If we take the validation error as a criterion to select the most
 adequate model, we would choose the model *Vix4_Spx1* with 10 hidden
 units, with validation MSE of 2.460, its performance on the test set
 is 4.102. Of all models actually processed, the *Vix4* is the best in
-terms of average performance on the test set, with a MSE of $3.991$.
+terms of average performance on the test set, with a MSE of 3.991.
 
 Looking at the results from a different perspective, we do not recognize
 a pattern in the figures that supports the choice of a particular model,
