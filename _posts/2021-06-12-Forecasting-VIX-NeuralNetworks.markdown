@@ -228,7 +228,7 @@ network of window 5 (bottom), stopped at iteration 33, 9 hidden units,
 with a test MSE of 1.597, performs well: the test data lie in the zone
 covered by the training and validation data.
 
-![figure3]({{site.baseurl}}/assets/img/figure3.JPG)
+![figure3]({{site.baseurl}}/assets/img/Figure3.JPG)
 
 
 VAR and ARIMA models
