@@ -3,7 +3,7 @@ layout: post
 title: "Beginner's guid to portfolio selection with Python"
 date: 2021-12-12 13:32:20 +0300
 description: This is a short description how to make a portfolio by Python. # Add post description (optional)
-img: PythonPort.jpeg # Add image post (optional)
+img: PythonPort.png # Add image post (optional)
 tags: [C++, Optimization, Portfolio, Genetic Algorithms] # add tag
 ---
 The selection of optimal portfolios is the central problem of financial investment decisions. Mathematically speaking, portfolio selection refers to the formulation of an objective function that determines the weights of the portfolio invested in each asset as to maximize return and minimize risk.
