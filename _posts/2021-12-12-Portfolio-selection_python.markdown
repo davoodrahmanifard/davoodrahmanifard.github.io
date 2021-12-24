@@ -14,9 +14,10 @@ The main objective of constructing a portfolio is to reduce risk without necessa
 
 ### Return
 Buying a financial asset can bring two types of return: dividend or interest payment and capital gain/loss. Therefore, return for the entire single holding period is as follows:
-$$
-R = capital gain + dividend yeild = \frac{P_{t}-P_{t-1}+D_{t}}{P_{t-1}}
-$$
+
+<img src="https://render.githubusercontent.com/render/math?math=R%20%3D%20capital%20gain%20%2B%20dividend%20yeild%20%3D%20%5Cfrac%7BP_%7Bt%7D-P_%7Bt-1%7D%2BD_%7Bt%7D%7D%7BP_%7Bt-1%7D%7D">
+
+
 
 
 
