@@ -134,6 +134,26 @@ The return and volatility of each one looks something like this:
  ['MET', 0.11810236562383247, 0.23320842196338287]]
  ```
 
+Now we generate 10,000 random weights and calculated portfolio return and volatility on each of them.
+
+```python
+plot_data = []
+n = 0
+while n < 10000:
+    weight = list(np.random.dirichlet(np.ones(len(return_matrix)), size= 1)[0])
+    port = Portfolio(return_matrix)
+    plot_data.append([weight, port.portfolio_return(weight), port.portfolio_volatility(weight)])
+    n += 1
+```
+
+And let’s plot the result. It is safe to assume that given these 9 stocks, the minimum-variance frontier is the set of portfolios along the left border of the point of the following graph.
+
+![figure1]({{site.baseurl}}/assets/img/port1.png)
+
+
+
+
+
 [Markowitz]: https://www.math.hkust.edu.hk/~maykwok/courses/ma362/07F/markowitz_JF.pdf
 
 
