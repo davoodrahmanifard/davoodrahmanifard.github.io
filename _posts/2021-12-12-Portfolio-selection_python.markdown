@@ -17,7 +17,20 @@ Buying a financial asset can bring two types of return: dividend or interest pay
 
 <img src="https://render.githubusercontent.com/render/math?math=R%20%3D%20capital%20gain%20%2B%20dividend%20yeild%20%3D%20%5Cfrac%7BP_%7Bt%7D-P_%7Bt-1%7D%2BD_%7Bt%7D%7D%7BP_%7Bt-1%7D%7D">
 
+However, this calculation doesn’t take into account the length of the period, holding period could be a month or even 10 years. The fact that this return is not annualized makes it hard for us to use it for comparison.
+For multiple periods, like several years, we can use either mean return or geometric mean return to aggregate the rates of return. Former one calculates overall return by dividing the sum of returns by the number of periods (years). Pretty easy and straightforward. However, this method assumes that the amount invested in the same at the beginning of each period, hence, it doesn’t take into account the compounding of return. This is why geometric mean return is a better representation of portfolio return.
 
+Here we assume that our portfolio is a long-term “buy-hold” portfolio, therefore using geometric mean is more suitable. Please note that using historical returns for calculating expected returns (in our case calculating geometric mean of historical returns and using is as a proxy for expected return) could be inaccurate in some cases!
+
+### Risk
+Portfolio risk is a chance that the combination of assets or units, within the investments that you own, fail to meet financial objectives.
+We calculate risk by measuring volatility of the returns using statistical measures such as variance, standard deviation, and covariance. Calculating standard deviation of a single financial asset is pretty straightforward: <img src="https://render.githubusercontent.com/render/math?math=%5Csigma%20%3D%20%5Csqrt%7B%5Cfrac%7B1%7D%7BN%7D%20%5Csum_%7Bi%3D1%7D%5EN%20(x_i%20-%20%5Cmu)%5E2%7D%20">.
+
+But when it comes to finding the portfolio’s variance, weighted average of financial assets’ variances will not do the trick because we have to consider correlation between the assets. The general equation goes like this:
+<img src="https://render.githubusercontent.com/render/math?math=%5Csigma%5E2%20%3D%20%20%5Csum_%7Bi%2Cj%3D1%7D%5EN%20%20%20w_%7Bi%7D%20w_%7Bj%7D%20Cov(R_%7Bi%7D%20R_%7Bj%7D)">
+Note that in order to simplify the evaluation, we assume that the returns are normally distributed, therefore can be described by its mean and variance. If this assumption is violated, there would be additional characteristics such as skewness and kurtosis.
+
+## Python codes
 
 
 
