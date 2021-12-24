@@ -150,7 +150,74 @@ And let’s plot the result. It is safe to assume that given these 9 stocks, the
 
 ![figure1]({{site.baseurl}}/assets/img/port1.jpg)
 
+Now, we are looking for the portfolio with minimum volatility. Minimum volatilty portfolio is presented in the following graph with a red star. 
 
+
+```python
+min_vol_port = portfolios.iloc[portfolios['Volatility'].idxmin()]
+min_vol_port
+```
+
+```
+Returns       0.176098
+Volatility    0.070633
+Name: 1083, dtype: float64
+```
+```python
+# plotting the minimum volatility portfolio
+plt.subplots(figsize=[10,6])
+plt.scatter(min_vol_port[1], min_vol_port[0], color='r', marker='*', s=300)
+plt.scatter(portfolios['Volatility'], portfolios['Returns'],marker='o', s=10, alpha=0.3,color='royalblue')
+plt.xlabel('Volatility')
+plt.ylabel('Returns')
+ax = plt.gca()
+ax.set_facecolor('whitesmoke')
+plt.show()
+```
+
+![figure2]({{site.baseurl}}/assets/img/port2.jpg)
+
+
+### Sharpe Ratio
+The ratio is the average return earned in excess of the risk-free rate per unit of volatility or total risk. Volatility is a measure of the price fluctuations of an asset or portfolio.
+
+The risk-free rate of return is the return on an investment with zero risk, meaning it’s the return investors could expect for taking no risk.
+
+The optimal risky portfolio is the one with the highest Sharpe ratio. The formula for this ratio is:
+<img src="https://render.githubusercontent.com/render/math?math=Sharpe%20Ratio%20%3D%20%5Cfrac%7BR_%7Bp%7D%20-%20R_%7Bf%7D%20%7D%7B%5Csigma_p%7D">.
+
+Now we can find optimal risky portfolio. An optimal risky portfolio can be considered as one that has highest Sharpe ratio.
+
+```python
+# Finding the optimal risky portfolio
+
+rf = 0.03 # risk free rate factor
+optimal_risky_port = portfolios.iloc[((portfolios['Returns']-rf)/portfolios['Volatility']).idxmax()]
+optimal_risky_port
+```
+
+```
+Returns       0.216927
+Volatility    0.076781
+Name: 2682, dtype: float64
+```
+
+```python
+# Plotting optimal portfolio
+plt.subplots(figsize=(10, 6))
+plt.scatter(portfolios['Volatility'], portfolios['Returns'],marker='o', s=10, alpha=0.3,color='royalblue')
+plt.scatter(min_vol_port[1], min_vol_port[0], color='r', marker='*', s=300)
+plt.scatter(optimal_risky_port[1], optimal_risky_port[0], color='g', marker='*', s=300)
+plt.xlabel('Volatility')
+plt.ylabel('Returns')
+ax = plt.gca()
+ax.set_facecolor('whitesmoke')
+plt.show()
+```
+
+optimal risky portfolio is presented in the following graph with a green star. 
+
+![figure3]({{site.baseurl}}/assets/img/port3.jpg)
 
 
 
