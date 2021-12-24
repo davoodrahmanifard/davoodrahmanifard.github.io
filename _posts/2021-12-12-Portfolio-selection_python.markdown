@@ -27,27 +27,16 @@ Portfolio risk is a chance that the combination of assets or units, within the i
 We calculate risk by measuring volatility of the returns using statistical measures such as variance, standard deviation, and covariance. Calculating standard deviation of a single financial asset is pretty straightforward: <img src="https://render.githubusercontent.com/render/math?math=%5Csigma%20%3D%20%5Csqrt%7B%5Cfrac%7B1%7D%7BN%7D%20%5Csum_%7Bi%3D1%7D%5EN%20(x_i%20-%20%5Cmu)%5E2%7D%20">.
 
 But when it comes to finding the portfolio’s variance, weighted average of financial assets’ variances will not do the trick because we have to consider correlation between the assets. The general equation goes like this:
-<img src="https://render.githubusercontent.com/render/math?math=%5Csigma%5E2%20%3D%20%20%5Csum_%7Bi%2Cj%3D1%7D%5EN%20%20%20w_%7Bi%7D%20w_%7Bj%7D%20Cov(R_%7Bi%7D%20R_%7Bj%7D)">
-Note that in order to simplify the evaluation, we assume that the returns are normally distributed, therefore can be described by its mean and variance. If this assumption is violated, there would be additional characteristics such as skewness and kurtosis.
+<img src="https://render.githubusercontent.com/render/math?math=%5Csigma%5E2%20%3D%20%20%5Csum_%7Bi%2Cj%3D1%7D%5EN%20%20%20w_%7Bi%7D%20w_%7Bj%7D%20Cov(R_%7Bi%7D%20R_%7Bj%7D)">.
+
+>Note that in order to simplify the evaluation, we assume that the returns are normally distributed, therefore can be described by its mean and variance. If this assumption is violated, there would be additional characteristics such as skewness and kurtosis.
 
 ## Python codes
 
 
 
-The selection of optimal portfolios is the central problem of financial investment decisions. Mathematically speaking, portfolio selection refers to the formulation of an objective function that determines the weights of the portfolio invested in each asset as to maximize return and minimize risk.
 
-This study presents the development of a system, based on Genetic Algorithm, in the process of the selection of portfolio and determination of the percentages to be invested in each asset, called the weight of the aaset in the investment portfolio management.The objective of the work is to evaluate the performance of Genetic Algorithms for portfolio selection and optimization. Portfolio selection and optimization are problems of multiple objectives (risk, return and correlation) where it is desired to choose a set of actions of companies with profit perspective to form an investment portfolio.
-
->This model does not have any limitation as far as the number of assets, is concerned.Parameters that affect the time of running the program in addition to the memory and CPU of the computer are number of assets and size of the population in each generation.
-
-This study developed in 3 main steps:
-* a study on portfolio selection and optimization and Genetic Algorithms literature
-* design two appropriate Genetic Algorithms for two mathematical models which designate the appropriate portfolios and their optimal weights
-* compare this method with linear and quadratic portfolio modeling for small scale problems and apply the designed models for a large scale real case of Alborz Insurance Company.
-
-
-Check out the [full text][full-doc] for more info and the [codes][codes-repo] written in C++ on my Github repo.
 
 [Markowitz]: https://www.math.hkust.edu.hk/~maykwok/courses/ma362/07F/markowitz_JF.pdf
-[codes-repo]:   https://github.com/davoodrahmanifard/GA-for-Portfolio-Selection
+
 
