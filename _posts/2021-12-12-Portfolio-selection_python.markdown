@@ -32,7 +32,67 @@ But when it comes to finding the portfolio’s variance, weighted average of fin
 >Note that in order to simplify the evaluation, we assume that the returns are normally distributed, therefore can be described by its mean and variance. If this assumption is violated, there would be additional characteristics such as skewness and kurtosis.
 
 ## Python codes
+First, we define two classes as class stock and class portfolio with required function in each class. 
 
+```
+import numpy as np
+from scipy import optimize 
+import matplotlib as plt
+
+#class Stock takes array of closing prices at the beginning and at the end of the year
+#and calculates geometric return and standard deviation
+#to simplify the calculation let's assume that there are no dividends
+class Stock:
+    def __init__(self, prices):
+        self.prices = prices
+
+    def annual_returns(self):
+        returns = []
+        for i in range(0, len(self.prices)-1):
+            returns.append((self.prices[i+1]-self.prices[i])/self.prices[i])
+        return(returns)
+            
+    def geometric_return(self, returns):
+        return(np.prod([x+1 for x in returns])**(1/len(returns))-1)
+    
+    def standard_deviation(self, returns):
+        mean = sum(returns)/len(returns)
+        return(np.sqrt(sum([(x-mean)**2 for x in returns])/len(returns)))
+
+#class portfolio takes matrix of returns for every stock, and array of their weights
+class Portfolio:
+    def __init__(self, returns):
+        self.returns = returns
+    
+    def portfolio_return(self, weights):
+        geo_returns = []
+        for i in range(0, len(self.returns)):        
+            geo_returns.append(np.prod([x+1 for x in self.returns[i]])**(1/len(self.returns[i]))-1)
+        return(sum([a*b for a,b in zip(weights, geo_returns)]))
+        #return(geo_returns)
+
+    def portfolio_volatility(self, weights):
+        sd_values = []
+        for i in self.returns:
+            mean = sum(i)/len(i)
+            sd_values.append(np.sqrt(sum([(x-mean)**2 for x in i])/len(i)))
+        weighted_average = [a*b for a,b in zip(weights, sd_values)]
+        corr = np.corrcoef(self.returns)
+        values = []
+        for j in range(0, len(weighted_average)):
+            values.append(sum([weighted_average[j]*weighted_average[x]*corr[j,x] for x in range(0,len(weighted_average))]))
+        return(np.sqrt(sum(values)))
+        #return(values)
+
+    def optimal_portfolio(self, desired_return):
+        bounds = ((0.0, 1.0),) * len(self.returns)
+        init = list(np.random.dirichlet(np.ones(len(self.returns)), size= 1)[0])
+        optimal_weights = optimize.minimize(self.portfolio_volatility, init, method='SLSQP',
+            constraints=({'type': 'eq', 'fun': lambda inputs: 1.0 - np.sum(inputs)},
+            {'type': 'eq', 'fun': lambda inputs: desired_return - self.portfolio_return(weights=inputs)}), bounds = bounds)
+        return optimal_weights.x
+        
+```
 
 
 
