@@ -34,7 +34,7 @@ But when it comes to finding the portfolio’s variance, weighted average of fin
 ## Python codes
 First, we define two classes as class stock and class portfolio with required function in each class. 
 
-```
+```python
 import numpy as np
 from scipy import optimize 
 import matplotlib as plt
@@ -91,7 +91,7 @@ class Portfolio:
             constraints=({'type': 'eq', 'fun': lambda inputs: 1.0 - np.sum(inputs)},
             {'type': 'eq', 'fun': lambda inputs: desired_return - self.portfolio_return(weights=inputs)}), bounds = bounds)
         return optimal_weights.x
-        
+
 ```
 
 
