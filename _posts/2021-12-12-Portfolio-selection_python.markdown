@@ -4,17 +4,19 @@ title: "Beginner's guid to portfolio selection with Python"
 date: 2021-12-12 13:32:20 +0300
 description: This is a short description how to make a portfolio by Python. # Add post description (optional)
 img: PythonPort.jpg # Add image post (optional)
-tags: [C++, Optimization, Portfolio, Genetic Algorithms] # add tag
+tags: [Python, Risk, Portfolio, Return] # add tag
 ---
 
 ## Introduction
 Harry Markowitz introduced modern portfolio theory in his 1952 paper titled [Portfolio Selection] [Markowitz]. He begins by outlining that portfolio selection is a two-step process; firstly, an investor must consider the future performance of the available assets (in terms of both risk and return) and subsequently, a decision can be made about how to construct the portfolio (i.e. how much money to allocate to each asset).
 
-Essentially, portfolio is a grouping of financial assets such as stocks, bonds, commodities, cash equivalents and others. Now the million-dollar-question is “How much of what should my portfolio consist of?” The main objective of constructing a portfolio is to reduce risk without necessarily decreasing expected rate of return.
-From this, risk and return are the main characteristics of the portfolio, or any financial instrument for that matter. Therefore, optimizing a portfolio is maximizing overall return while minimizing the risk. It is a hard task to do considering the fact that risk and return are positively correlated, meaning that if risk is high, return is high as well.
+The main objective of constructing a portfolio is to reduce risk without necessarily decreasing expected rate of return. From this, risk and return are the main characteristics of the portfolio, or any financial instrument for that matter. Therefore, optimizing a portfolio is maximizing overall return while minimizing the risk. It is a hard task to do considering the fact that risk and return are positively correlated, meaning that if risk is high, return is high as well.
 
 ### Return
 Buying a financial asset can bring two types of return: dividend or interest payment and capital gain/loss. Therefore, return for the entire single holding period is as follows:
+$$
+R = capital gain + dividend yeild = \frac{P_{t}-P_{t-1}+D_{t}}{P_{t-1}}
+$$
 
 
 
