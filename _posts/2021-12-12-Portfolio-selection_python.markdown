@@ -32,7 +32,7 @@ But when it comes to finding the portfolio’s variance, weighted average of fin
 >Note that in order to simplify the evaluation, we assume that the returns are normally distributed, therefore can be described by its mean and variance. If this assumption is violated, there would be additional characteristics such as skewness and kurtosis.
 
 ## Python codes
-First, we define two classes as class stock and class portfolio with required function in each class. 
+First, we define two classes as class stock and class portfolio with required functions in each class like the following:
 
 ```python
 import numpy as np
@@ -94,8 +94,45 @@ class Portfolio:
 
 ```
 
+### Constructing the portfolio
+After we’re done with defining functions for calculation of two main characteristics: return and risk, we shall start constructing the portfolio. I’m using yfinance module to get trading data from Yahoo! Finance.
 
+Let’s assume that we’re considering 9 stocks: Amazon, Apple, Google, Nike, Starbucks, The Southern Company, Intel Corporation, Cisco Systems and MetLife. And let’s extract the historical data on each of those (using stock prices at the end of each year). 
 
+```python
+import yfinance as yf
+import pandas as pd
+
+stocks_to_portfolio = ['AMZN', 'AAPL','GOOGL', 'SBUX','NKE', 'SO', 'INTC', 'CSCO', 'MET']
+
+return_matrix = []
+stock_char = []
+for i in stocks_to_portfolio:
+    stock = yf.Ticker(i)
+    stock = stock.history(period='10y')
+    data = stock.groupby(stock.index.year).apply(pd.Series.tail,1)
+    prices = list(data['Close'])
+    stock = Stock(prices)
+    stock_char.append([i, stock.geometric_return(stock.annual_returns()), stock.standard_deviation(stock.annual_returns())])
+    return_matrix.append(stock.annual_returns())
+
+stock_char
+
+```
+
+The return and volatility of each one looks something like this:
+
+```
+[['AMZN', 0.3476909048776389, 0.37890285434588206],
+ ['AAPL', 0.3039892922984164, 0.3109028924005264],
+ ['GOOGL', 0.24696159081269897, 0.24159029975307134],
+ ['SBUX', 0.19162712648225866, 0.18047608365432197],
+ ['NKE', 0.22665887703919307, 0.18705252088261798],
+ ['SO', 0.08510454865390904, 0.16384354149552766],
+ ['INTC', 0.11000314509944009, 0.19236852159004345],
+ ['CSCO', 0.1661399078846546, 0.13202793819065048],
+ ['MET', 0.11810236562383247, 0.23320842196338287]]
+ ```
 
 [Markowitz]: https://www.math.hkust.edu.hk/~maykwok/courses/ma362/07F/markowitz_JF.pdf
 
