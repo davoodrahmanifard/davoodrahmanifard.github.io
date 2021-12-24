@@ -148,7 +148,7 @@ while n < 10000:
 
 And let’s plot the result. It is safe to assume that given these 9 stocks, the minimum-variance frontier is the set of portfolios along the left border of the point of the following graph.
 
-![figure1]({{site.baseurl}}/assets/img/port1.png)
+![figure1]({{site.baseurl}}/assets/img/port1.jpg)
 
 
 
