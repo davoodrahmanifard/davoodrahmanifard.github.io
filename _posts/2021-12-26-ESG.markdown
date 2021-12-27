@@ -8,4 +8,20 @@ tags: [Python, ESG, Investment, Rating] # add tag
 ---
 
 ## What is ESG 
-ESG is the acronym for **E**nvironmental, **S**ocial, and (Corporate) **G**overnance, the three broad categories, or areas, of interest for what is termed “socially responsible investors.” They are investors who consider it important to incorporate their values and concerns (such as environmental concerns) into their selection of investments instead of simply considering the potential profitability and/or risk presented by an investment opportunity.
+ESG is the acronym for **E**nvironmental, **S**ocial, and (Corporate) **G**overnance, the three broad categories, or areas, of interest for what is termed “socially responsible investors.” They are investors who consider it important to incorporate their values and concerns (such as environmental concerns) into their selection of investments instead of simply considering the potential profitability and/or risk presented by an investment opportunity. The Financial Times Lexicon defines ESG as “a generic term used in capital markets and used by investors to evaluate corporate behaviour and to determine the future financial performance of companies.”
+
+## ESG score
+An organisation’s ESG score is, simply put, a numerical measure of how it is perceived to be performing on a wide range of environmental, social and governance (ESG) topics. With the growing need to quantify a business’s ESG performance, different scoring systems have emerged. Analysis companies offering various calculation processes are offering to create bespoke ESG scores for clients, but, just as ESG scoring is the measurement of perception rather than reality, so ESG data systems can be largely subjective. 
+
+A reliable scoring system needs to be objective, accurate and consistent. It should be able to provide comparable scores for businesses across sectors and geographies. It should encompass the perceptions of all stakeholders.
+
+## MSCI ESG rating
+[MSCI Inc.] [MSCI], is an American finance company headquartered in New York City and serving as a global provider of equity, fixed income, hedge fund stock market indexes, multi-asset portfolio analysis tools and ESG products.
+
+ESG Risk Ratings provided by MSCI are designed to measure a company's resilience to long-term, industry material environmental, social and governance (ESG) risks. MSCI uses a rules-based methodology to identify industry leaders and laggards according to their exposure to ESG risks and how well they manage those risks relative to peers. You can find the full expalanation of their ESG ratings methodology in this [link] [MSCI-method].
+
+
+
+[MSCI]: https://www.msci.com/
+[MSCI-method]: https://www.msci.com/documents/1296102/4769829/MSCI+ESG+Ratings+Methodology+-+Exec+Summary+Dec+2020.pdf/15e36bed-bba2-1038-6fa0-2cf52a0c04d6?t=1608110671584
+
