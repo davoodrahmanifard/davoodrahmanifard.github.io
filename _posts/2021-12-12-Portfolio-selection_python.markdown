@@ -225,15 +225,7 @@ optimal risky portfolio is presented in the following graph with a green star.
 
 Now, given that we want, say, annual return of 22%, how much of each asset do we buy in order to maintain the lowest level of volatility? What is the optimal portfolio, given the desired return of 22%? We added this code to calculate the optimal portfolio weights, given desired portfolio return and matrix of annual returns.
 
-```python
-def optimal_portfolio(self, desired_return):
-        bounds = ((0.0, 1.0),) * len(self.returns)
-        init = list(np.random.dirichlet(np.ones(len(self.returns)), size= 1)[0])
-        optimal_weights = optimize.minimize(self.portfolio_volatility, init, method='SLSQP',
-            constraints=({'type': 'eq', 'fun': lambda inputs: 1.0 - np.sum(inputs)},
-            {'type': 'eq', 'fun': lambda inputs: desired_return - self.portfolio_return(weights=inputs)}), bounds = bounds)
-        return optimal_weights.x
-      
+```python     
 port = Portfolio(return_matrix)
 port.optimal_portfolio(0.22)
 ```
