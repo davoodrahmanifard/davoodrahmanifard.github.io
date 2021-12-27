@@ -25,7 +25,7 @@ ESG Risk Ratings provided by MSCI are designed to measure a company's resilience
 ESG risk ratings play an important role in stock market analysis, and previously, the only way of obtaining this data from MSCI was to open the Search Tool in a browser, search for a symbol, and click on one of the autosuggested results. With using a python package called "py-msci-esg" we can automate the collection of the important ESG risk rating data. This is a simple package that uses "Selenium" to scrape content from the MSCI  ESG Risk Corporate Search Tool and returns the results in JSON format.
 The following piece of python code shows how we can get the ESG rating of **ROYAL DUTCH SHELL** plc.
 
-'''python
+```python
 from msci_esg.ratefinder import ESGRateFinder
 
 # Create an ESGRateFinder object, optionally passing in debug=True for more print statements
@@ -40,13 +40,13 @@ response = ratefinder.get_esg_rating(
 )
 # The response is a dictionary; print it
 print(response)
-'''
+```
 
 The result will look like the following:
 
-'''
+```python
 {'rating-paragraph': 'Shell is a leader among 28 companies in the integrated oil & gas industry.', 'rating-history-paragraph': 'Shell was upgraded in September, 2021.', 'current': {'esg_rating': 'aa', 'esg_category': 'leader'}}
-'''
+```
 
 ![figure1]({{site.baseurl}}/assets/img/ESG_SHEEL.JPG)
 
