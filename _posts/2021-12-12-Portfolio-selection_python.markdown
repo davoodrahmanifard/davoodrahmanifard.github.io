@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Beginner's guid to portfolio selection with Python"
+title: "Introductory guid to portfolio selection with Python"
 date: 2021-12-12 13:32:20 +0300
 description: This is a short description how to make a portfolio by Python. # Add post description (optional)
 img: PythonPort.jpg # Add image post (optional)
