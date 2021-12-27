@@ -148,6 +148,18 @@ while n < 10000:
 
 And let’s plot the result. It is safe to assume that given these 9 stocks, the minimum-variance frontier is the set of portfolios along the left border of the point of the following graph.
 
+```python
+portfolios  = pd.DataFrame(plot_data)
+portfolios = portfolios[[1,2]]
+portfolios.columns=['Returns', 'Volatility']
+portfolios.plot.scatter(x='Volatility', y='Returns', marker='o', s=10, alpha=0.3, grid=True, figsize=[10,6],color='royalblue')
+plt.xlabel('Volatility')
+plt.ylabel('Returns')
+ax = plt.gca()
+ax.set_facecolor('whitesmoke')
+plt.show()
+```
+
 ![figure1]({{site.baseurl}}/assets/img/port1.jpg)
 
 Now, we are looking for the portfolio with minimum volatility. Minimum volatilty portfolio is presented in the following graph with a red star. 
@@ -165,13 +177,7 @@ Name: 1083, dtype: float64
 ```
 ```python
 # plotting the minimum volatility portfolio
-plt.subplots(figsize=[10,6])
 plt.scatter(min_vol_port[1], min_vol_port[0], color='r', marker='*', s=300)
-plt.scatter(portfolios['Volatility'], portfolios['Returns'],marker='o', s=10, alpha=0.3,color='royalblue')
-plt.xlabel('Volatility')
-plt.ylabel('Returns')
-ax = plt.gca()
-ax.set_facecolor('whitesmoke')
 plt.show()
 ```
 
@@ -204,14 +210,7 @@ Name: 2682, dtype: float64
 
 ```python
 # Plotting optimal portfolio
-plt.subplots(figsize=(10, 6))
-plt.scatter(portfolios['Volatility'], portfolios['Returns'],marker='o', s=10, alpha=0.3,color='royalblue')
-plt.scatter(min_vol_port[1], min_vol_port[0], color='r', marker='*', s=300)
 plt.scatter(optimal_risky_port[1], optimal_risky_port[0], color='g', marker='*', s=300)
-plt.xlabel('Volatility')
-plt.ylabel('Returns')
-ax = plt.gca()
-ax.set_facecolor('whitesmoke')
 plt.show()
 ```
 
