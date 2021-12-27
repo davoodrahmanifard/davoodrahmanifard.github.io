@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Automate the collection of ESG rating with Python"
+date: 2021-12-26 13:32:20 +0300
+description: This is a short description of how automate the collection of ESG rating with Python. # Add post description (optional)
+img: esg-investing.jpg # Add image post (optional)
+tags: [Python, ESG, Investment, Rating] # add tag
+---
+
+## What is ESG 
+ESG is the acronym for **E**nvironmental, **S**ocial, and (Corporate) **G**overnance, the three broad categories, or areas, of interest for what is termed “socially responsible investors.” They are investors who consider it important to incorporate their values and concerns (such as environmental concerns) into their selection of investments instead of simply considering the potential profitability and/or risk presented by an investment opportunity.
