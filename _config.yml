@@ -22,7 +22,7 @@ social-email: davood.rahmanifard@gmail.com # add your Email address
 discus-identifier:  # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: G-V2SVFJJZ0X # Google Analytics
 
 # Build Settings
 markdown: kramdown
