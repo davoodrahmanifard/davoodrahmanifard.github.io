@@ -1,7 +1,10 @@
 <head>
 	<meta charset="utf-8">
 	<title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
-
+  
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="{{ site.title }}" property="og:site_name">
